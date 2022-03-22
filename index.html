@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeCanGrowYou</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+ 
+<link href="https://cdn.jsdelivr.net/npm/daisyui@2.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+ 
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <style>
+    img {
+      filter:
+        sepia(1) hue-rotate(190deg) opacity(.46) grayscale(.7)
+    }
+  </style> -->
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <div class="container w-full max-w-7xl bg-white ">
+    <!--fixed inset-x-0 navbar-inverse-->
+    <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl p-5
+mx-auto
+md:items-center md:justify-between md:flex-row md:px-6 z-10
+lg:px-8 
+">
+
+      <div class="flex flex-row items-center justify-between lg:justify-start z-10">
+        <a href="https://pranavanand97.github.io/projectC/index.html" class="
+    text-4xl
+    font-bold
+    tracking-tighter
+    text-blue-600
+    transition
+    duration-500
+    ease-in-out
+    transform
+    tracking-relaxed
+    lg:pr-3
+    z-50
+  "> WeCanGrowYou </a>
+        <button class=" z-50 rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-8 h-8">
+            <path x-show="!open" fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+            <path x-show="open" fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd" style="display: none"></path>
+          </svg>
+        </button>
+      </div>
+      <nav :class="{'flex': open, 'hidden': !open} "
+        class="z-50 flex-col items-center flex-grow hidden pb-4 border-blue-600 md:pb-0 md:flex md:justify-end md:flex-row lg:border-l-2 lg:pl-2">
+        <!-- <a class=" z-50
+      font-semibold
+    px-4
+    py-2
+    mt-2
+    text-sm text-gray-500
+    md:mt-0
+    hover:text-blue-600
+    focus:outline-none focus:shadow-outline
+  " href="#">About</a> -->
+        <a class="
+      z-50
+      font-semibold
+    px-4
+    py-2
+    mt-2
+    text-sm text-gray-500
+    md:mt-0
+    hover:text-blue-600
+    focus:outline-none focus:shadow-outline
+  " href="https://pranavanand97.github.io/projectC/contactUs.html">Contact Us</a>
+        <a class="
+      z-50
+      font-semibold
+    px-4
+    py-2
+    mt-2
+    text-sm text-gray-500
+    md:mt-0
+    hover:text-blue-600
+    focus:outline-none focus:shadow-outline
+  " href="https://pranavanand97.github.io/resDaySunday/">Know My Status</a>
+        <div @click.away="open = false" class="relative" x-data="{ open: false }">
+          <button @click="open = !open" class="z-50
+        font-semibold
+      flex flex-row
+      items-center
+      w-full
+      px-4
+      py-2
+      mt-2
+      text-sm text-left text-gray-500
+      md:w-auto md:inline md:mt-0
+      hover:text-blue-600
+      focus:outline-none focus:shadow-outline 
+    ">
+            <span>What we do? </span>
+            <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+              class="z-50 inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform rotate-0 md:-mt-1">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <div x-show="open" x-transition:enter="transition ease-out duration-100"
+            x-transition:enter-start="transform opacity-0 scale-95"
+            x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
+            x-transition:leave-start="transform opacity-100 scale-100"
+            x-transition:leave-end="transform opacity-0 scale-95" class="z-50
+      absolute
+      right-0
+      z-9999
+      w-full
+      mt-2
+      origin-top-right
+      rounded-md
+      shadow-lg
+      md:w-60
+    " style="display: none">
+            <div class="px-2 py-2 bg-white rounded-md shadow">
+              <a class="z-50
+          block
+          px-4
+          py-2
+          mt-2
+          text-sm text-gray-500
+          md:mt-0
+          hover:text-blue-600
+          focus:outline-none focus:shadow-outline
+        " href="#">We'll help you find a Job</a>
+              <a class="z-50
+          block
+          px-4
+          py-2
+          mt-2
+          text-sm text-gray-500
+          md:mt-0
+          hover:text-blue-600
+          focus:outline-none focus:shadow-outline
+        " href="#">We'll help you build a Startup</a>
+              <a class="z-50
+          block
+          px-4
+          py-2
+          mt-2
+          text-sm text-gray-500
+          md:mt-0
+          hover:text-blue-600
+          focus:outline-none focus:shadow-outline
+        " href="#">We'll help grab your dreams.</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="inline-flex items-center gap-2 list-none lg:ml-auto">
+          <a class="
+      font-medium
+    px-4
+    py-2
+    mt-2
+    text-sm text-gray-300
+    md:mt-0
+    hover:text-blue-600
+    focus:outline-none focus:shadow-outline">Login as </a></div> -->
+
+        <div class="flex flex wrap pt-10 md:pt-0">
+          <div class="dropdown inline-block relative w-1/2	">
+            <a href="https://pranavanand97.github.io/projectC/StudentLogin.html">
+              <button class="
+        items-center
+        z-50
+        block
+        px-10
+        py-2.5
+        text-base
+        font-medium
+        text-center text-blue-600
+        transition
+        duration-500
+        ease-in-out
+        transform
+        border-2 border-white
+        shadow-md
+        rounded-xl
+        focus:outline-none
+        focus:ring-2
+        focus:ring-offset-2
+        focus:ring-gray-500
+      "> Student </button></a>
+      <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+        <li class=""><a class="bg-white hover:text-blue-600 rounded-t  hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">Faq</a></li>
+        <li class=""><a class=" bg-white hover:text-blue-600 hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">Apply for a job</a></li>
+        <li class=""><a class="rounded-b bg-white  hover:bg-blue-500 py-2 px-4 block whitespace-no-wrap" href="#">Talent Pool</a></li>
+      </ul>
+          </div>
+
+        <div class="dropdown inline-block relative pl-3 w-1/2	">  
+          <button class="
+    items-center
+    block
+    px-10
+    py-3
+    text-base
+    font-medium
+    text-center text-white
+    transition
+    duration-500
+    ease-in-out
+    transform
+    bg-blue-600
+    rounded-xl
+    hover:bg-blue-700
+    focus:outline-none
+    focus:ring-2
+    focus:ring-offset-2
+    focus:ring-blue-500
+  "> Employer </button>
+  <ul class="dropdown-menu absolute hidden text-gray-700  pt-1">
+    <li class=""><a class=" bg-white rounded-t hover:text-blue-600 hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">Faq</a></li>
+    <li class=""><a class=" bg-white hover:text-blue-600 hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">Register your company</a></li>
+    <li class=""><a class="rounded-b  bg-white hover:bg-blue-500 py-2 px-4 block whitespace-no-wrap " href="#">Post a job</a></li>
+  </ul>
+      </div>
+    </div>
+        
+      </nav>
+    </div>
+  </div>
+<style>
+  .dropdown:hover .dropdown-menu {
+  display: block;
+  
+}
+
+</style>
+
+  
+  <!--the nav section ends here &nbsp;
+<br>
+<br>
+<br>
+<br>-->
+
+
+
+  <!--the header section starts here-->
+  <section class="w-full bg-white z-50">
+    <div class="
+  z-10
+relative
+items-center
+w-full
+px-5
+py-12
+mx-auto
+md:px-12
+lg:px-16
+max-w-10xl
+lg:py-24
+">
+      <div class="flex w-full mx-auto text-left break-normal	">
+        <div class="relative inline-flex items-center mx-auto align-middle">
+          <div class="text-center">
+            <h1 class=" z-30 	
+        max-w-5xl
+        text-4xl
+        font-extrabold	
+      
+        leading-0
+        tracking-tighter
+        text-neutral-600 items-center
+        md:text-5xl 
+        lg:text-6xl lg:max-w-7xl 
+      "> Struggling for a job? <br class="hidden lg:block"> Not Anymore - We fixed it here! </h1>
+            <p class="
+        max-w-xl
+        mx-auto
+        mt-8
+        text-base
+        leading-relaxed
+        text-gray-500
+      "> India's best job finder for free. We created this portal to enrich our sense of mutual growth through
+              collective collaboration and a stronger community. </p>
+            <div class="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
+              <div class="mt-3 rounded-lg sm:mt-0">
+                <a href="https://pranavanand97.github.io/projectC/ViewJobs.html"> <button class="
+            items-center
+            block
+            px-5
+            py-4
+            text-base
+            font-medium
+            text-center text-white
+            transition
+            duration-500
+            ease-in-out
+            transform
+            bg-blue-600
+            lg:px-10
+            rounded-xl
+            hover:bg-blue-700
+            focus:outline-none
+            focus:ring-2
+            focus:ring-offset-2
+            focus:ring-blue-500
+            "> Find Jobs </button> </a>
+              </div>
+              <div class="mt-3 rounded-lg sm:mt-0 sm:ml-3">
+                <a href="https://pranavanand97.github.io/projectC/EmployerCTABook.html"><button class="
+            items-center
+            block
+            px-5
+            lg:px-10
+            py-3.5
+            text-base
+            font-medium
+            text-center text-blue-600
+            transition
+            duration-500
+            ease-in-out
+            transform
+            border-2 border-white
+            shadow-md
+            rounded-xl
+            focus:outline-none
+            focus:ring-2
+            focus:ring-offset-2
+            focus:ring-gray-500
+            "> Give Jobs </button></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      &nbsp;
+      <div class="flex justify-center trigger-text home-page font-medium
+    px-4
+    py-2
+    mt-2
+    z-10
+    text-sm text-gray-300
+    md:mt-0
+    hover:text-blue-600
+    focus:outline-none focus:shadow-outline">Backed by &nbsp; 🅱️ <span class="yc-logo">otx
+          Automations</span></div>
+    </div>
+    </div>
+  </section>
+
+<!-- <carouel part starts here> -->
+<div class=" border bg-white dark:bg-gray-100 pt-8 	">
+  <div class="carousel carousel-center  space-x-4 object-fill h-55 w-full  bg-white dark:bg-gray-100  ">
+    <div class="owl-carousel ">
+    <div class="carousel-item w-screen md:w-auto items border-2 border-gray-500 shadow-xl rounded-lg  ">
+      <img src="https://d8it4huxumps7.cloudfront.net/images/home-page-banner/6218944dc7efd_rotating-banner__8_.jpg?d=750x365" alt="Drink">
+    </div> 
+    <div class="carousel-item w-screen md:w-auto items border-2 border-gray-500 shadow-xl rounded-lg	">
+      <img src="https://d8it4huxumps7.cloudfront.net/images/home-page-banner/6218944dc7efd_rotating-banner__8_.jpg?d=750x365" alt="Drink">
+    </div> 
+    <div class="carousel-item w-screen md:w-auto items border-2 border-gray-500 shadow-xl rounded-lg	">
+      <img src="https://d8it4huxumps7.cloudfront.net/images/home-page-banner/622207992c251_1280_x_500.jpg?d=750x365" alt="Drink">
+    </div> 
+    <div class="carousel-item w-screen md:w-auto items border-2 border-gray-500 drop-shadow rounded-lg	">
+      <img src="https://d8it4huxumps7.cloudfront.net/images/home-page-banner/622ee1a9916dd_Runway__D2C_creatives_2022-03.jpg?d=750x365" alt="Drink">
+    </div> 
+    <div class="carousel-item w-screen md:w-auto items border-2 border-gray-500 drop-shadow rounded-lg">
+      <img src="https://d8it4huxumps7.cloudfront.net/images/home-page-banner/6218944dc7efd_rotating-banner__8_.jpg?d=750x365" alt="Drink">
+    </div> 
+    <div class="carousel-item w-screen md:w-auto items border-2 border-gray-500 drop-shadow rounded-lg">
+      <img src="https://d8it4huxumps7.cloudfront.net/images/home-page-banner/6218944dc7efd_rotating-banner__8_.jpg?d=750x365" alt="Drink">
+    </div> 
+    <div class="carousel-item w-screen md:w-auto items border-2 border-gray-500 drop-shadow rounded-lg">
+      <img src="https://d8it4huxumps7.cloudfront.net/images/home-page-banner/6218944dc7efd_rotating-banner__8_.jpg?d=750x365" alt="Drink">
+    </div>
+  </div>
+</div>
+</div>
+
+ <script>
+
+$(document).ready(function(){
+$(".owl-carousel").owlCarousel();
+});                    
+
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+margin:20,
+loop:true,
+autoplay:true,
+autoplayTimeout:4000,
+autoplayHoverPause:true,
+responsive:{
+0:{
+items:1
+},
+600:{
+items:3
+},
+1000:{
+items:2
+}
+
+}
+});
+</script>  
+<div class="dark:bg-gray-100">
+<br></div>
+
+<!-- <carouel part ends here> -->
+
+
+  <!-- Statistics -->
+  
+  <section class="text-white bg-blue-500 px-10">
+    <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+      <div class="max-w-xl">
+        <h2 class="text-4xl font-bold sm:text-6xl">
+          Our Numbers
+        </h2>
+  
+        <p class="mt-4 sm:text-xl">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic tempore beatae facilis dignissimos rem praesentium
+          officia obcaecati quisquam iure recusandae!
+        </p>
+      </div>
+  
+      <ul class="grid grid-cols-1 gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 ">
+        <li class="p-8 shadow-xl rounded-xl">
+          <p class="text-3xl font-extrabold">50</p>
+          <p class="mt-1 text-xl font-medium">Companies</p>
+        </li>
+  
+        <li class="p-8 shadow-xl rounded-xl">
+          <p class="text-3xl font-extrabold">190</p>
+          <p class="mt-1 text-xl font-medium">Opportunities
+  
+          </p>
+        </li>
+  
+        <li class="p-8 shadow-xl rounded-xl">
+          <p class="text-3xl font-extrabold">1.5k+</p>
+          <p class="mt-1 text-xl font-medium">Users</p>
+        </li>
+  
+        <li class="p-8 shadow-xl rounded-xl">
+          <p class="text-3xl font-extrabold">1000+</p>
+          <p class="mt-1 text-xl font-medium">New Letter Subscription</p>
+        </li>
+  
+        <li class="p-8 shadow-xl rounded-xl">
+          <p class="text-3xl font-extrabold">1000+</p>
+          <p class="mt-1 text-xl font-medium">Impressions</p>
+        </li>
+  
+        <li class="p-8 shadow-xl rounded-xl">
+          <p class="text-3xl font-extrabold">500+</p>
+          <p class="mt-1 text-xl font-medium">Community Members</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  
+
+
+<!-- Featured companies -->
+
+<div class="px-5 dark:bg-white">
+  <div class=" pt-5 space-x-4 carousel carousel-center  rounded-box w-full h-30 md:w-full md:h-50  "data-interval="3000">
+    <div class="hidden md:block hover:text-blue-600"><h1 class="font-bold align-middle	pt-10  ">Trending Organizations</h1></div>
+    <div class="owl-carousel ">
+    <div class="carousel-item border-solid border border-gray-300 drop-shadow items  h-20 md:h-auto w-40 md:w-auto " data-interval="3000">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/330px-Tata_logo.svg.png" class="rounded-box ">
+    </div> 
+    <div class="carousel-item border-solid border border-gray-300 drop-shadow items h-20 md:h-auto w-40 md:w-auto">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/330px-Tata_logo.svg.png" class="rounded-box">
+    </div> 
+    <div class="carousel-item border-solid border border-gray-300 drop-shadow items h-20 md:h-auto w-40 md:w-auto">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/330px-Tata_logo.svg.png" class="rounded-box">
+    </div> 
+    <div class="carousel-item border-solid border border-gray-300 drop-shadow items h-20 md:h-auto w-40 md:w-auto">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/330px-Tata_logo.svg.png" class="rounded-box">
+    </div> 
+    <div class="carousel-item border-solid border border-gray-300 drop-shadow items h-20 md:h-auto w-40 md:w-auto">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/330px-Tata_logo.svg.png" class="rounded-box">
+    </div> 
+    <div class="carousel-item border-solid border border-gray-300 drop-shadow items h-20 md:h-auto w-40 md:w-auto">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/330px-Tata_logo.svg.png" class="rounded-box">
+    </div> 
+    <div class="carousel-item border-solid border-2 border-gray-300 drop-shadow items h-20 md:h-auto w-40 md:w-auto">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/330px-Tata_logo.svg.png" class="rounded-box">
+    </div>
+  </div><br/>
+  </div>
+  </div>
+  
+  <script>
+  
+    $(document).ready(function(){
+      $(".owl-carousel").owlCarousel();
+    });                    
+    
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        margin:20,
+        loop:true,
+        autoplay:true,
+        autoplayTimeout:4000,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:2
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:6
+            }
+    
+        }
+    });
+    </script>
+  
+  <!-- Featured companies -->
+
+  <!-- Internship Categories -->
+
+  <div class="dark:bg-white"><h1 class="text-xl text-blue-500 font-extrabold	pl-3 pt-3 pb-10">Internship Categories</h1></div>
+  <div class="flex wrap dark:bg-gray-100 ">
+    <!-- <div><h1 class="text-xl">Categories</h1></div> -->
+    <div class="owl-carousel pl-3 ">
+      <div class="card w-96 bg-base-100 shadow-xl image-full ">
+        <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" class="blur-sm	" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">Finance!</h2>
+          <p>Join most wanted finance start ups!</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">Apply Now</button>
+          </div>
+        </div>
+      </div>
+  <div class="card w-96 bg-base-100 shadow-xl image-full">
+    <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"class="blur-sm	" /></figure>
+    <div class="card-body">
+      <h2 class="card-title">Content Writing!</h2>
+      <p>Join most wanted finance start ups!</p>
+      <div class="card-actions justify-end">
+        <button class="btn btn-primary">Apply Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="card w-96 bg-base-100 shadow-xl image-full">
+    <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" class="blur-sm	" /></figure>
+    <div class="card-body">
+      <h2 class="card-title">HR!</h2>
+      <p>If a dog chews shoes whose shoes does he choose?</p>
+      <div class="card-actions justify-end">
+        <button class="btn btn-primary">Apply Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="card w-96 bg-base-100 shadow-xl image-full">
+    <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" class="blur-md	" /></figure>
+    <div class="card-body">
+      <h2 class="card-title">Engineering!</h2>
+      <p>If a dog chews shoes whose shoes does he?</p>
+      <!-- <strong class="w-48 bg-blue-500 border-blue-500 border text-white lowercase px-3 py-1.5 rounded text-[12px] font-medium">
+        #webdevelopment #Free #Filling Fast
+      </strong> -->
+      
+      <div class="flex wrap">
+        <!-- <strong class=" pr-3 border w-1/3 border-blue-500 text-white bg-blue-500 uppercase px-5 py-1.5 rounded-full text-[10px] tracking-wide">
+          #Bug #you
+        </strong> -->
+        <!-- <strong class="border w-1/3 border-blue-500 text-white bg-blue-500 uppercase px-5 py-1.5 rounded-full text-[10px] tracking-wide">
+          #Bug
+        </strong>
+        <strong class=" pr-3 border w-1/3 border-blue-500 text-white bg-blue-500 uppercase px-5 py-1.5 rounded-full text-[10px] tracking-wide">
+          #Bug
+        </strong> -->
+      </div>
+      <div class="card-actions justify-end">
+        <strong class="border w-1/3 border-blue-500 text-white bg-blue-500 uppercase px-5 py-1.5 rounded-full text-[10px] tracking-wide">
+          #Bug #fixed
+        </strong>
+        <button class="btn btn-primary">Apply Now</button>
+       
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <script>
+  
+    $(document).ready(function(){
+      $(".owl-carousel").owlCarousel();
+    });                    
+    
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        margin:20,
+        loop:true,
+        autoplay:true,
+        autoplayTimeout:4000,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:3
+            }
+    
+        }
+    });
+    </script>
+
+    <!-- Internship Categories -->
+
+    <!-- Job Categories -->
+
+  <div class="dark:bg-white"><h1 class="text-xl text-blue-500 font-extrabold	pl-3 pt-3 pb-10">Job Categories</h1></div>
+  <div class="flex wrap dark:bg-white ">
+    <!-- <div><h1 class="text-xl">Categories</h1></div> -->
+    <div class="owl-carousel pl-3">
+      <div class="card w-96 bg-base-100 shadow-xl image-full">
+        <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">Finance!</h2>
+          <p>Join most wanted finance start ups!</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">Apply Now</button>
+          </div>
+        </div>
+      </div>
+  <div class="card w-96 bg-base-100 shadow-xl image-full">
+    <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+    <div class="card-body">
+      <h2 class="card-title">Content Writing!</h2>
+      <p>Join most wanted finance start ups!</p>
+      <div class="card-actions justify-end">
+        <button class="btn btn-primary">Apply Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="card w-96 bg-base-100 shadow-xl image-full">
+    <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+    <div class="card-body">
+      <h2 class="card-title">HR!</h2>
+      <p>If a dog chews shoes whose shoes does he choose?</p>
+      <div class="card-actions justify-end">
+        <button class="btn btn-primary">Apply Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="card w-96 bg-base-100 shadow-xl image-full">
+    <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+    <div class="card-body">
+      <h2 class="card-title">Engineering!</h2>
+      <p>If a dog chews shoes whose shoes does he choose?</p>
+      <div class="card-actions justify-end">
+        <button class="btn btn-primary">Apply Now</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <script>
+  
+    $(document).ready(function(){
+      $(".owl-carousel").owlCarousel();
+    });                    
+    
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        margin:20,
+        loop:true,
+        autoplay:false,
+        autoplayTimeout:4000,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:3
+            }
+    
+        }
+    });
+    </script>
+
+    <!-- Internship Categories -->
+
+
+  <!-- CTA section -->
+
+<!-- <div class="bg-[linear-gradient(180deg,#005BBB_49.9%,#FFD500_50%)] ">
+  <aside class="relative overflow-hidden text-white ">
+    <div class="relative z-10 max-w-screen-xl px-4 py-24 mx-auto sm:px-6 lg:px-8">
+      <div class="max-w-xl space-y-8 text-center sm:text-right sm:ml-auto">
+        <h2 class="text-4xl font-bold sm:text-5xl">
+          New product launched!
+          <span class="hidden sm:block">
+            Impossible to put down
+          </span>
+        </h2>
+  
+        <p class="hidden sm:block sm:max-w-lg sm:ml-auto sm:text-lg">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi, fuga voluptatum ex rem enim deleniti
+          officiis, odio voluptatibus non soluta! Quo, explicabo aspernatur!
+        </p>
+  
+        <a class="inline-flex items-center px-6 py-3 font-medium bg-black rounded-full hover:opacity-75" href="">
+          Get it now
+  
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-4 h-4 ml-3"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  
+    <div class="absolute inset-0 w-full h-full mix-blend-multiply">
+      <img
+        src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+        alt="New robot toy"
+        class="absolute inset-0 object-cover object-top w-full h-full"
+      />
+    </div>
+  </aside>
+</div>
+  CtA ends here -->
+
+  <!-- USP -->
+
+  <section class="text-white bg-gray-900 px-10 ">
+    <div class="max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="max-w-xl">
+        <h2 class="text-3xl font-bold sm:text-4xl">What makes us special</h2>
+  
+        <p class="mt-4 text-gray-300">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+          dolores iure fugit totam iste obcaecati. Consequatur ipsa quod ipsum
+          sequi culpa delectus, cumque id tenetur quibusdam, quos fuga minima.
+        </p>
+      </div>
+  
+      <div
+        class="grid grid-cols-1 gap-8 mt-8 md:gap-12 md:mt-16 md:grid-cols-2 lg:grid-cols-3"
+      >
+        <div class="flex items-start">
+          <span class="flex-shrink-0 p-4 bg-gray-800 rounded-lg">
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+              <path
+                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+              ></path>
+            </svg>
+          </span>
+  
+          <div class="ml-4">
+            <h2 class="text-lg font-bold">Lorem, ipsum dolor.</h2>
+  
+            <p class="mt-1 text-sm text-gray-300">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+              cumque tempore est ab possimus quisquam reiciendis tempora animi!
+              Quaerat, saepe?
+            </p>
+          </div>
+        </div>
+  
+        <div class="flex items-start">
+          <span class="flex-shrink-0 p-4 bg-gray-800 rounded-lg">
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+              <path
+                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+              ></path>
+            </svg>
+          </span>
+  
+          <div class="ml-4">
+            <h2 class="text-lg font-bold">Lorem, ipsum dolor.</h2>
+  
+            <p class="mt-1 text-sm text-gray-300">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+              cumque tempore est ab possimus quisquam reiciendis tempora animi!
+              Quaerat, saepe?
+            </p>
+          </div>
+        </div>
+  
+        <div class="flex items-start">
+          <span class="flex-shrink-0 p-4 bg-gray-800 rounded-lg">
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+              <path
+                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+              ></path>
+            </svg>
+          </span>
+  
+          <div class="ml-4">
+            <h2 class="text-lg font-bold">Lorem, ipsum dolor.</h2>
+  
+            <p class="mt-1 text-sm text-gray-300">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+              cumque tempore est ab possimus quisquam reiciendis tempora animi!
+              Quaerat, saepe?
+            </p>
+          </div>
+        </div>
+  
+        <div class="flex items-start">
+          <span class="flex-shrink-0 p-4 bg-gray-800 rounded-lg">
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+              <path
+                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+              ></path>
+            </svg>
+          </span>
+  
+          <div class="ml-4">
+            <h2 class="text-lg font-bold">Lorem, ipsum dolor.</h2>
+  
+            <p class="mt-1 text-sm text-gray-300">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+              cumque tempore est ab possimus quisquam reiciendis tempora animi!
+              Quaerat, saepe?
+            </p>
+          </div>
+        </div>
+  
+        <div class="flex items-start">
+          <span class="flex-shrink-0 p-4 bg-gray-800 rounded-lg">
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+              <path
+                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+              ></path>
+            </svg>
+          </span>
+  
+          <div class="ml-4">
+            <h2 class="text-lg font-bold">Lorem, ipsum dolor.</h2>
+  
+            <p class="mt-1 text-sm text-gray-300">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+              cumque tempore est ab possimus quisquam reiciendis tempora animi!
+              Quaerat, saepe?
+            </p>
+          </div>
+        </div>
+  
+        <div class="flex items-start">
+          <span class="flex-shrink-0 p-4 bg-gray-800 rounded-lg">
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+              <path
+                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+              ></path>
+            </svg>
+          </span>
+  
+          <div class="ml-4">
+            <h2 class="text-lg font-bold">Lorem, ipsum dolor.</h2>
+  
+            <p class="mt-1 text-sm text-gray-300">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+              cumque tempore est ab possimus quisquam reiciendis tempora animi!
+              Quaerat, saepe?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USP -->
+
+  <!-- Testimonial -->
+
+  <link
+  crossorigin="anonymous"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  rel="stylesheet"
+/>
+
+<script
+  crossorigin="anonymous"
+  defer
+  src="https://unpkg.com/swiper/swiper-bundle.min.js"
+></script>
+
+<style>
+  .swiper-container {
+    overflow: hidden;
+  }
+</style>
+
+<section class="bg-gray-100">
+  <div
+    class="px-4 py-16 mx-auto sm:px-6 lg:pl-8 lg:pr-0 lg:mr-0 sm:py-24 max-w-[1340px]"
+  >
+    <div
+      class="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-16 gap-y-8 lg:items-center"
+    >
+      <div class="max-w-xl text-center sm:text-left">
+        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+          Don't just take our word for it...
+          <br class="hidden sm:block lg:hidden" />
+          Read reviews from our customers
+        </h2>
+
+        <p class="mt-4 text-gray-500">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas
+          veritatis illo placeat harum porro optio fugit a culpa sunt id!
+        </p>
+
+        <div class="hidden lg:mt-8 lg:flex lg:gap-4">
+          <button
+            aria-label="Previous slide"
+            class="p-3 text-pink-600 border border-pink-600 rounded-full hover:bg-pink-600 hover:text-white prev-button"
+          >
+            <svg
+              class="w-5 h-5 transform -rotate-180"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 5l7 7-7 7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+
+          <button
+            aria-label="Next slide"
+            class="p-3 text-pink-600 border border-pink-600 rounded-full hover:bg-pink-600 hover:text-white next-button"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 5l7 7-7 7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="-mx-6 lg:col-span-2 lg:mx-0">
+        <div class="swiper-container">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <blockquote
+                class="flex flex-col justify-between h-full p-12 bg-white"
+              >
+                <div>
+                  <div class="flex gap-0.5 text-green-500">
+                    <svg
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="mt-4">
+                    <p class="text-2xl font-bold text-pink-600 sm:text-3xl">
+                      Stayin' Alive
+                    </p>
+
+                    <p class="mt-4 leading-relaxed text-gray-500">
+                      No, Rose, they are not breathing. And they have no arms or
+                      legs … Where are they? You know what? If we come across
+                      somebody with no arms or legs, do we bother resuscitating
+                      them? I mean, what quality of life do we have there?
+                    </p>
+                  </div>
+                </div>
+
+                <footer class="mt-8 text-sm text-gray-500">
+                  &mdash; Michael Scott
+                </footer>
+              </blockquote>
+            </li>
+
+            <li class="swiper-slide">
+              <blockquote
+                class="flex flex-col justify-between h-full p-12 bg-white"
+              >
+                <div>
+                  <div class="flex gap-0.5 text-green-500">
+                    <svg
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="mt-4">
+                    <p class="text-2xl font-bold text-pink-600 sm:text-3xl">
+                      Stayin' Alive
+                    </p>
+
+                    <p class="mt-4 leading-relaxed text-gray-500">
+                      No, Rose, they are not breathing. And they have no arms or
+                      legs … Where are they? You know what? If we come across
+                      somebody with no arms or legs, do we bother resuscitating
+                      them? I mean, what quality of life do we have there?
+                    </p>
+                  </div>
+                </div>
+
+                <footer class="mt-8 text-sm text-gray-500">
+                  &mdash; Michael Scott
+                </footer>
+              </blockquote>
+            </li>
+
+            <li class="swiper-slide">
+              <blockquote
+                class="flex flex-col justify-between h-full p-12 bg-white"
+              >
+                <div>
+                  <div class="flex gap-0.5 text-green-500">
+                    <svg
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="mt-4">
+                    <p class="text-2xl font-bold text-pink-600 sm:text-3xl">
+                      Stayin' Alive
+                    </p>
+
+                    <p class="mt-4 leading-relaxed text-gray-500">
+                      No, Rose, they are not breathing. And they have no arms or
+                      legs … Where are they? You know what? If we come across
+                      somebody with no arms or legs, do we bother resuscitating
+                      them? I mean, what quality of life do we have there?
+                    </p>
+                  </div>
+                </div>
+
+                <footer class="mt-8 text-sm text-gray-500">
+                  &mdash; Michael Scott
+                </footer>
+              </blockquote>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center gap-4 mt-8 lg:hidden">
+      <button
+        aria-label="Previous slide"
+        class="p-4 text-pink-600 border border-pink-600 rounded-full hover:bg-pink-600 hover:text-white prev-button"
+      >
+        <svg
+          class="w-5 h-5 transform -rotate-180"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 5l7 7-7 7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </button>
+
+      <button
+        aria-label="Next slide"
+        class="p-4 text-pink-600 border border-pink-600 rounded-full hover:bg-pink-600 hover:text-white next-button"
+      >
+        <svg
+          class="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 5l7 7-7 7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.swiper-container', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 32,
+      autoplay: {
+        delay: 8000,
+      },
+      breakpoints: {
+        640: {
+          centeredSlides: true,
+          slidesPerView: 1.25,
+        },
+        1024: {
+          centeredSlides: false,
+          slidesPerView: 1.5,
+        },
+      },
+      navigation: {
+        nextEl: '.next-button',
+        prevEl: '.prev-button',
+      },
+    })
+  })
+</script>
+
+<!-- Testimonial -->
+
+
+  <!-- footer starts below-->
+  <!-- <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
+    <span class="text-gray-400 inline-flex items-center leading-none text-sm"></span>
+  </div> -->
+
+
+  <footer class="bg-white" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="sr-only">Footer</h2>
+    <div class="px-5 py-12 mx-auto max-w-7xl lg:py-16 md:px-12 lg:px-8">
+      <div class="xl:grid xl:grid-cols-3 xl:gap-8 ">
+        <div class="space-y-8 xl:col-span-1 bg-gray-80">
+          <a href="#" class="
+      text-lg
+      font-bold
+      tracking-tighter
+      text-blue-600
+      transition
+      duration-500
+      ease-in-out
+      transform
+      tracking-relaxed
+      lg:pr-8
+    "> WeCanGrowYou &nbsp; | &nbsp; wcgy </a>
+          <p class="w-1/2 mt-2 text-sm text-gray-500"> There is no shortcuts to your Dream Job, Let's Workhard to Grab
+            it Today!</p>
+        </div>
+        <div class="grid grid-cols-2 gap-8 mt-12 xl:mt-0 xl:col-span-2">
+          <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div>
+              <h3 class="
+          text-xs
+          font-semibold
+          tracking-wider
+          text-blue-600
+          uppercase
+        "> We offer </h3>
+              <ul role="list" class="mt-4 space-y-4">
+                <li>
+                  <a href="https://pranavanand97.github.io/projectC/internships.html"
+                    class="text-sm font-normal text-gray-500 hover:text-gray-900"> Internships </a>
+                </li>
+                <li>
+                  <a href="https://pranavanand97.github.io/projectC/Parttime.html"
+                    class="text-sm font-normal text-gray-500 hover:text-gray-900"> Part-time Jobs </a>
+                </li>
+                <li>
+                  <a href="https://pranavanand97.github.io/projectC/FullTime.html"
+                    class="text-sm font-normal text-gray-500 hover:text-gray-900"> Full-time Jobs </a>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-12 md:mt-0">
+              <h3 class="
+          text-xs
+          font-semibold
+          tracking-wider
+          text-blue-600
+          uppercase
+        "> Support </h3>
+              <ul role="list" class="mt-4 space-y-4">
+                <li>
+                  <a href="https://doodle.com/" target="_blank" rel="noopener noreferrer"
+                    class="text-sm font-normal text-gray-500 hover:text-gray-900"> Book a Call </a>
+                </li>
+                <li>
+                  <a href="https://pranavanand97.github.io/projectC/faq.html"
+                    class="text-sm font-normal text-gray-500 hover:text-gray-900"> FAQ </a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm font-normal text-gray-500 hover:text-gray-900"> Knock here with iDeas </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="hidden lg:justify-end md:grid md:grid-cols-1">
+            <div class="w-full mt-12 md:mt-0">
+              <div class="mt-8 lg:justify-end xl:mt-0">
+                <h3 class="
+            text-xs
+            font-semibold
+            tracking-wider
+            text-blue-600
+            uppercase
+          "> Job Alert Mailer </h3>
+                <p class="mt-4 text-sm text-gray-500 lg:ml-auto"> Sorted Job Alerts, sent to your inbox weekly. </p>
+                <div class="inline-flex items-center gap-2 list-none lg:ml-auto">
+                  <form id="submitjob-form"  action="" method="post" id="revue-form" name="revue-form" target="_blank" class="
+              p-1
+              mt-4
+              transition
+              duration-500
+              ease-in-out
+              transform
+              border2
+              bg-gray-50
+              rounded-xl
+              sm:max-w-lg sm:flex
+            ">
+                    <div class="flex-1 min-w-0 revue-form-group">
+                      <label for="member_email" class="sr-only">Email address</label>
+                      <input id="cta-email" type="email" class="
+                  block
+                  w-full
+                  px-5
+                  py-3
+                  text-base text-neutral-600
+                  placeholder-gray-300
+                  transition
+                  duration-500
+                  ease-in-out
+                  transform
+                  bg-transparent
+                  border border-transparent
+                  rounded-md
+                  focus:outline-none
+                  focus:border-transparent
+                  focus:ring-2
+                  focus:ring-white
+                  focus:ring-offset-2
+                  focus:ring-offset-gray-300
+                " placeholder="Enter your email  ">
+                    </div>
+                    <div class="mt-4 sm:mt-0 sm:ml-3 revue-form-actions">
+                      <button type="submit" value="Subscribe" name="member[subscribe]" id="member_submit" class="
+                  block
+                  w-full
+                  px-5
+                  py-3
+                  text-base
+                  font-medium
+                  text-white
+                  bg-blue-600
+                  border border-transparent
+                  rounded-lg
+                  shadow
+                  hover:bg-blue-700
+                  focus:outline-none
+                  focus:ring-2
+                  focus:ring-white
+                  focus:ring-offset-2
+                  focus:ring-offset-gray-300
+                  sm:px-10
+                "> Notify me </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="
+px-5
+py-12
+mx-auto
+bg-gray-50
+max-w-7xl
+sm:px-6
+md:flex md:items-center md:justify-between
+lg:px-8
+">
+      <div class="flex justify-center mb-8 space-x-6 md:order-last md:mb-0">
+        <a href="#" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">Facebook</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">Instagram</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">Twitter</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+            </path>
+          </svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">GitHub</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">Discord</span>
+          <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z" />
+          </svg>
+
+        </a>
+      </div>
+      <div class="mt-8 md:mt-0 md:order-1">
+        <span class="mt-2 text-sm font-light text-gray-500"> Made with ❤️ &nbsp; by <a
+            href="https://pranavanand97.github.io/projectC/TeamPageDetails.html"
+            class="mx-2 text-wickedblue hover:text-gray-500" rel="noopener noreferrer"> Team WeCanGrowYou
+            <!--<span style="color: #e25555;">&hearts;</span>-->
+          </a> <a>&#9679;</a>
+          <a href="#" class="mx-2 text-wickedblue hover:text-blue-500" rel="noopener noreferrer"> Click here to grab our
+            Press Kit </a> <a>&#9679;</a>
+          <a href="#" class="mx-2 text-wickedblue hover:text-blue-500" rel="noopener noreferrer"> Privacy Policy & Terms
+            of Use </a><a>&#9679;</a>
+          <a href="#" class="mx-2 text-wickedblue hover:text-blue-500" rel="noopener noreferrer"> Work with Us
+          </a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    $("#submitjob-form").submit((e) => {
+      e.preventDefault()
+      $.ajax({
+        url: "https://script.google.com/macros/s/AKfycbwltnPmRNoxqiiyUByQii4D2da7OfX7mr6hCW1QSA/exec",
+        data: $("#submitjob-form").serialize(),
+        method: "post",
+        success: function (response) {
+          alert("Hurry!! Successfully added your to our Exclusive Job Alert Mail list!")
+          window.location.reload()
+          //window.location.href="https://google.com"
+        },
+        error: function (err) {
+          alert("Oh No! Something went Error, Please try again!")
+
+        }
+      })
+    })
+  </script>
+
+</body>
+
+</html>
