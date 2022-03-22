@@ -1,0 +1,434 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.24.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/flowbite.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@1.0.1/dist/conversational-form.min.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js" integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.js" integrity="sha512-Fq/wHuMI7AraoOK+juE5oYILKvSPe6GC5ZWZnvpOO/ZPdtyA29n+a5kVLP4XaLyDy9D1IBPYzdFycO33Ijd0Pg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="container w-full max-w-7xl bg-white ">
+        <!--fixed inset-x-0 navbar-inverse-->
+        <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl p-5
+      mx-auto
+      md:items-center md:justify-between md:flex-row md:px-6 z-10
+      lg:px-8 
+      ">
+    
+          <div class="flex flex-row items-center justify-between lg:justify-start z-10">
+            <a href="https://pranavanand97.github.io/projectC/index.html" class="
+          text-4xl
+          font-bold
+          tracking-tighter
+          text-blue-600
+          transition
+          duration-500
+          ease-in-out
+          transform
+          tracking-relaxed
+          lg:pr-3
+          z-50
+        "> WeCanGrowYou </a>
+            <button class=" z-50 rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+              <svg fill="currentColor" viewBox="0 0 20 20" class="w-8 h-8">
+                <path x-show="!open" fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                  clip-rule="evenodd"></path>
+                <path x-show="open" fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd" style="display: none"></path>
+              </svg>
+            </button>
+          </div>
+          <nav :class="{'flex': open, 'hidden': !open} "
+            class="z-50 flex-col items-center flex-grow hidden pb-4 border-blue-600 md:pb-0 md:flex md:justify-end md:flex-row lg:border-l-2 lg:pl-2">
+            <a class=" z-50
+            font-semibold
+          px-4
+          py-2
+          mt-2
+          text-sm text-gray-500
+          md:mt-0
+          hover:text-blue-600
+          focus:outline-none focus:shadow-outline
+        " href="#">About</a>
+            <a class="
+            z-50
+            font-semibold
+          px-4
+          py-2
+          mt-2
+          text-sm text-gray-500
+          md:mt-0
+          hover:text-blue-600
+          focus:outline-none focus:shadow-outline
+        " href="https://pranavanand97.github.io/projectC/contactUs.html">Contact Us</a>
+            <div @click.away="open = false" class="relative" x-data="{ open: false }">
+              <button @click="open = !open" class="z-50
+              font-semibold
+            flex flex-row
+            items-center
+            w-full
+            px-4
+            py-2
+            mt-2
+            text-sm text-left text-gray-500
+            md:w-auto md:inline md:mt-0
+            hover:text-blue-600
+            focus:outline-none focus:shadow-outline 
+          ">
+                <span>What we do? </span>
+                <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+                  class="z-50 inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform rotate-0 md:-mt-1">
+                  <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+              <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                x-transition:enter-start="transform opacity-0 scale-95"
+                x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
+                x-transition:leave-start="transform opacity-100 scale-100"
+                x-transition:leave-end="transform opacity-0 scale-95" class="z-50
+            absolute
+            right-0
+            z-9999
+            w-full
+            mt-2
+            origin-top-right
+            rounded-md
+            shadow-lg
+            md:w-60
+          " style="display: none">
+                <div class="px-2 py-2 bg-white rounded-md shadow">
+                  <a class="z-50
+                block
+                px-4
+                py-2
+                mt-2
+                text-sm text-gray-500
+                md:mt-0
+                hover:text-blue-600
+                focus:outline-none focus:shadow-outline
+              " href="https://pranavanand97.github.io/projectC/ViewJobs.html">We'll help you find a Job</a>
+                  <a class="z-50
+                block
+                px-4
+                py-2
+                mt-2
+                text-sm text-gray-500
+                md:mt-0
+                hover:text-blue-600
+                focus:outline-none focus:shadow-outline
+              " href="#">We'll help you build a Startup</a>
+                  <a class="z-50
+                block
+                px-4
+                py-2
+                mt-2
+                text-sm text-gray-500
+                md:mt-0
+                hover:text-blue-600
+                focus:outline-none focus:shadow-outline
+              " href="https://pranavanand97.github.io/projectC/ViewJobs.html">We'll help grab your dreams.</a>
+                </div>
+              </div>
+            </div>
+    
+            <div class="inline-flex items-center gap-2 list-none lg:ml-auto">
+              <a class="
+            font-medium
+          px-4
+          py-2
+          mt-2
+          text-sm text-gray-300
+          md:mt-0
+          hover:text-blue-600
+          focus:outline-none focus:shadow-outline">Login as </a>
+    
+    
+              <a href="https://pranavanand97.github.io/projectC/StudentLogin.html">
+                <button class="
+            items-center
+            block
+            px-10
+            py-2.5
+            text-base
+            font-medium
+            text-center text-blue-600
+            transition
+            duration-500
+            ease-in-out
+            transform
+            border-2 border-white
+            shadow-md
+            rounded-xl
+            focus:outline-none
+            focus:ring-2
+            focus:ring-offset-2
+            focus:ring-gray-500
+          "> Student </button></a>
+    
+              <a href="https://pranavanand97.github.io/projectC/EmployerLogin.html">
+                <button class="
+            items-center
+            block
+            px-10
+            py-3
+            text-base
+            font-medium
+            text-center text-white
+            transition
+            duration-500
+            ease-in-out
+            transform
+            bg-blue-600
+            rounded-xl
+            hover:bg-blue-700
+            focus:outline-none
+            focus:ring-2
+            focus:ring-offset-2
+            focus:ring-blue-500
+          "> Employer </button></a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    
+      <!-- the nav Bar ends Here-->
+      <div class="h-screen bg-white dark:bg-black ">
+        <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+      <form method="POST" data-parsley-validate="" id="form-id1" class="gform dark:bg-black bg-white dark:bg-black overflow-hidden	 " action="" multistep="true">
+
+        <div class="border-b-2 py-4 px-8">
+            <div class="uppercase tracking-wide text-xs font-bold text-gray-500 mb-1 leading-tight" x-text="`Step: ${step} of 3`"></div>
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div class="flex-1">
+                    <div x-show="step === 1">
+                        <div class="text-lg font-bold text-gray-700 leading-tight">Company Profile</div>
+                    </div>
+                    
+                    <div x-show="step === 2">
+                        <div class="text-lg font-bold text-gray-700 leading-tight">Registration</div>
+                    </div>
+
+                    <div x-show="step === 3">
+                        <div class="text-lg font-bold text-gray-700 leading-tight"></div>
+                    </div>
+                </div>
+
+                <div class="flex items-center md:w-64">
+                    <div class="w-full bg-white rounded-full mr-2">
+                        <div class="rounded-full bg-green-500 text-xs leading-none h-2 text-center text-white" :style="'width: '+ parseInt(step / 3 * 100) +'%'"></div>
+                    </div>
+                    <div class="text-xs w-10 text-gray-600" x-text="parseInt(step / 3 * 100) +'%'"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-5 text-center py-5">
+          <div class="mx-auto w-32 h-32 mb-2 border rounded-full relative bg-gray-100 mb-4 shadow-inset">
+            <img id="image" class="object-cover w-full h-32 rounded-full" :src="image" />
+          </div>
+          
+          <label 
+            for="fileInput"
+            type="button"
+            class="cursor-pointer inine-flex justify-between items-center focus:outline-none border py-2 px-4 rounded-lg shadow-sm text-left text-gray-600 bg-white hover:bg-gray-100 font-medium"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-flex flex-shrink-0 w-6 h-6 -mt-1 mr-1" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="0" y="0" width="24" height="24" stroke="none"></rect>
+              <path d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" />
+              <circle cx="12" cy="13" r="3" />
+            </svg>						
+            Browse Logo
+          </label>
+
+          <div class="mx-auto w-48 text-gray-500 text-xs text-center mt-1">Click to add logo</div>
+
+          <input name="fileInput" id="fileInput" accept="image/*" class="hidden" type="file" @change="let file = document.getElementById('fileInput').files[0]; 
+            var reader = new FileReader();
+            reader.onload = (e) => image = e.target.result;
+            reader.readAsDataURL(file);"required>
+        </div>
+        
+        <div class="flex flex-wrap -mx-3 mb-6 py-5	px-14 ">
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+              First Name
+            </label>
+            <input name="First Name" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane" required>
+            
+          </div>
+
+          <div class="w-full md:w-1/2 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+              Last Name
+            </label>
+            <input name="Last Name"class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe" required>
+          </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-6 px-14">
+            <div class="w-full px-3">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                Company Name
+              </label>
+              <input name="Company Name"class=" appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" placeholder="Abc Ltd." required 	>
+              
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-3 mb-6 px-14">
+            <div class="w-full px-3">
+              <label data-parsley-type="email"	class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                Company Mail
+              </label>
+              <input name="Company email"class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="email" placeholder="demo@AbcLtd.com" required>
+              <p class="text-gray-600 text-xs italic"></p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap -mx-3 mb-6 px-14">
+            <div class="w-full px-3">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                Company Phone
+              </label>
+              <input name="Company phone"class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="tel" placeholder="demo@AbcLtd.com" required>
+              <p class="text-gray-600 text-xs italic"></p>
+            </div>
+          </div>
+
+        <div class="flex flex-wrap -mx-3 mb-6 bg-white dark:bg-black px-14">
+          <div class="w-full px-3 bg-white dark:bg-black">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+              Company Website
+            </label>
+            <input name="url" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="url" type="url" data-parsley-type="url"	 placeholder="https://yourcompany.com" required>
+            
+          </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-2 bg-white dark:bg-black bg-white dark:bg-black px-14">
+          <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0 bg-white dark:bg-black">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+              City
+            </label>
+            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="Bangalore" required>
+          </div>
+          <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0 bg-white dark:bg-black">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+              State
+            </label>
+            <div class="relative bg-white dark:bg-black">
+              <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="state" id="grid-state" required="" >
+                    <option value="">Select State</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                    <option value="Daman and Diu">Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Puducherry">Puducherry</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                    </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0 bg-white dark:bg-black">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+              Zip
+            </label>
+            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="number" placeholder="671313" required  data-parsley-length="[6, 6]"			>
+          </div>
+        </div>
+     
+      </br>
+        <div class="px-14 pb-8">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+            Register
+          </button>
+          </div>
+      </form>
+      </div>
+
+      <script type="text/javascript">
+        $(function () {
+          $('#form-id1').parsley().on('field:validated', function() {
+            var ok = $('.parsley-error').length === 0;
+            $('.bs-callout-info').toggleClass('hidden', !ok);
+            $('.bs-callout-warning').toggleClass('hidden', ok);
+            
+          })
+          .on('form:submit', function() {
+            
+            $.ajax({
+          url:"https://script.google.com/macros/s/AKfycbx_rAbzKoSSBg16wDSeM_wDE3ypY_CKepx51sbR5uAfgezMv9To-EJ0RXk4BcuvudQmVA/exec",
+          data:$("#form-id1").serialize(),
+          method:"post",
+          success:function (response){
+              alert("Form submitted successfully")
+              $('#form-id1').trigger("reset");
+      
+              // window.location.reload()
+              window.location.href="index.html"
+          },
+          error:function (err){
+              alert("Something Error")
+      
+          }
+        })
+        return false;
+          });
+        });
+        </script>
+
+      
+</body>
+</html>
